@@ -1,0 +1,58 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+html, head, div {
+    font-family: "Corbel";
+    scroll-behavior: smooth;
+}
+
+h1, h3 {
+    line-height: 12px; 
+}
+
+a:link, a:visited {
+    color: #095484;
+}
+
+#headtext, p {
+    text-align: center;
+    line-height: 2;
+}
+
+#notifarea {
+    line-height: 45px;
+    height: 45px;
+    background-color: #EBEBEB;
+    top: 50%;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+#notifleft {
+    float: left; 
+    padding-left: 17px;
+}
+
+#notifright {
+    float: right; 
+    padding-right: 17px;
+}
+
+.container {
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 1700px;
+    transition: 0.3s;
+}
+  
+.container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.insides {
+    padding: 2px 16px;
+}
+

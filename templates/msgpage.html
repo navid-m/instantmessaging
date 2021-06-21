@@ -1,0 +1,22 @@
+<html>
+<title>chat</title>
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/msgpformat.css')}}">
+    <script src = "{{url_for('static', filename='js/external/socket.io.min.js')}}"></script>
+    <script src = "{{url_for('static', filename='js/sockets.js')}}"></script>
+</head>
+<span id = "cheader">The code is <span id = "cleartext">{{ code }}</span></span><br><br>
+<span id = "cinfo">Others can use this to join the chatroom.</span><br><br><br>
+<div id = "controlcontainer">
+    <div id = "messages"></div>
+    <div id = "bandinp">
+        <table id = "conttable">
+            <tr>
+            <th><button id = "leave" class = "chcontrol" onclick = "location.href = '/'">Leave</button></th>
+            <th id = "messagecell"><textarea id = "message" autofocus></textarea></th>
+            <th><button id = "send" class = "chcontrol" onclick = "sendmsg()">Send</button></th>
+            </tr>
+        </table>
+    </div>
+</div>
+</html>

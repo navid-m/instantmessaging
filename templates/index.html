@@ -1,0 +1,33 @@
+<html>
+<title>instantmessaging</title>
+<head>
+    <script src = "{{url_for('static', filename='js/external/wow.min.js')}}"></script>
+    <script src = "{{url_for('static', filename='js/external/sweetalert2.all.min.js')}}"></script>
+    <script src = "{{url_for('static', filename='js/external/polyfill.min.js')}}"></script>
+    <script src = "{{url_for('static', filename='js/common.js')}}"></script>
+    {% if not go %}
+        <script src = "{{url_for('static', filename='js/main.js')}}"></script>
+    {% else %}
+        <script src = "{{url_for('static', filename='js/modals.js')}}"></script>
+        <div id = "notifarea">
+            <span id = "notifleft">Your name has been set to {{ username }}</span> 
+            <span id = "notifright"><a href = "/changename">[Change]</a></span>
+        </div><br>
+    {% endif %}
+    <!-- Necessary due to poor distribution of animate.css -->
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/external/animate.css')}}">
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/external/animate.min.css')}}">
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/external/material-ui.min.css')}}">
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/external/sweetalert2.min.css')}}">
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/format.css')}}">
+</head>
+<body>
+    <div class = "wow fadeInUp">
+        <div id = "headtext">
+            <h4>Chatrooms are accessed through randomly generated invite codes</h4>
+            <p><a href = "/chat">Create chat</a></p>
+            <p><a href = "javascript:join()">Join chat</a></p>
+        </div> 
+    </div>
+</body>
+</html>
